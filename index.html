@@ -32,6 +32,34 @@
     </section>
 
     <div class="contact-grid">
+        <!-- Redes Sociais (Instagram, Facebook e Mapa) -->
+        <div class="social-buttons-container fade-in-element">
+            <!-- Instagram -->
+            <a class="social-icon-button" href="https://instagram.com/stylemenoficial" target="_blank">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" />
+                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a class="social-icon-button" href="https://facebook.com/stylemenoficial" target="_blank">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
+                        stroke-width="2" />
+                </svg>
+            </a>
+
+            <!-- Mapa -->
+            <a class="social-icon-button" href="https://www.google.com/maps?q=João+Pessoa,+PB" target="_blank">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" />
+                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </a>
+        </div>
+
         <!-- Agenda -->
         <div class="button-container fade-in-element">
             <button class="main-button" onclick="openModal()">
@@ -51,37 +79,19 @@
             <p class="text">Tire suas dúvidas sobre nossos produtos e peças</p>
         </div>
 
-        <!-- Instagram -->
-        <div class="button-container fade-in-element">
-            <a class="main-button" href="https://instagram.com/stylemenoficial" target="_blank">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" />
-                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" />
-                </svg>
-                <span>Siga no Instagram</span>
-            </a>
-            <p class="text">Veja nossos looks e peças</p>
-        </div>
-
-        <!-- Facebook -->
-        <div class="button-container fade-in-element">
-            <a class="main-button" href="https://facebook.com/stylemenoficial" target="_blank">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
-                        stroke-width="2" />
-                </svg>
-                <span>Curta no Facebook</span>
-            </a>
-            <p class="text">Fique por dentro das promoções</p>
-        </div>
-
         <!-- Carrossel de Serviços -->
         <section class="services-carousel-section">
             <div class="services-carousel-container">
+                <button class="carousel-nav-btn carousel-nav-prev" id="carouselPrev" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
                 <div class="services-carousel" id="servicesCarousel">
+                    <div class="carousel-spacer"></div>
 
-                    <div class="service-card" onclick="openModal()">
+                    <div class="service-card card-1" onclick="openModal()">
                         <div class="service-card-image" style="background-image: url('neutro2.jpg');">
                             <div class="service-card-overlay"></div>
                             <div class="service-card-content">
@@ -91,7 +101,7 @@
                         </div>
                     </div>
 
-                    <div class="service-card" onclick="openModal()">
+                    <div class="service-card card-2" onclick="openModal()">
                         <div class="service-card-image" style="background-image: url('neutro.jpg');">
                             <div class="service-card-overlay"></div>
                             <div class="service-card-content">
@@ -101,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="service-card" onclick="openModal()">
+                    <div class="service-card card-3" onclick="openModal()">
                         <div class="service-card-image" style="background-image: url('neutrocalca.jpg');">
                             <div class="service-card-overlay"></div>
                             <div class="service-card-content">
@@ -111,7 +121,7 @@
                         </div>
                     </div>
 
-                    <div class="service-card" onclick="openModal()">
+                    <div class="service-card card-4" onclick="openModal()">
                         <div class="service-card-image" style="background-image: url('objeto.jpg');">
                             <div class="service-card-overlay"></div>
                             <div class="service-card-content">
@@ -121,24 +131,17 @@
                         </div>
                     </div>
 
+                    <div class="carousel-spacer"></div>
                 </div>
+                <button class="carousel-nav-btn carousel-nav-next" id="carouselNext" aria-label="Próximo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
             </div>
         </section>
 
-    </div>
-
-    <div class="container">
-        <section class="contact-section">
-            <!-- Mapa -->
-            <div class="map-container fade-in-element">
-                <div class="map-wrapper">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.597544836739!2d-34.8733876!3d-7.1194958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace810852ae4f1%3A0xaf5445223401f2bb!2sJo%C3%A3o%20Pessoa%2C%20PB!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </section>
     </div>
 
     <!-- Footer minimalista -->

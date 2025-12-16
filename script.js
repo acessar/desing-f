@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.scrollLeft = 0;
 
     let currentIndex = 0;
-    const cards = carousel.querySelectorAll('.service-card');
+    const cards = Array.from(carousel.querySelectorAll('.service-card'));
     const totalCards = cards.length;
     let isScrolling = false;
     let autoScrollInterval;
@@ -216,10 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
         isScrolling = true;
         
         const card = cards[index];
+        const cardLeft = card.offsetLeft;
         const cardWidth = card.offsetWidth;
+        const carouselWidth = carousel.offsetWidth;
         
-        // Cálculo para centralizar ou focar o card
-        const scrollPosition = card.offsetLeft - (carousel.offsetWidth - cardWidth) / 2;
+        // Cálculo para centralizar o card
+        const scrollPosition = cardLeft - (carouselWidth - cardWidth) / 2;
         
         carousel.scrollTo({
             left: scrollPosition,
@@ -235,6 +237,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function nextCard() {
         if (isDragging) return;
         currentIndex = (currentIndex + 1) % totalCards;
+        scrollToCard(currentIndex);
+    }
+    
+    // Função para ir ao card anterior
+    function prevCard() {
+        if (isDragging) return;
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
         scrollToCard(currentIndex);
     }
     
@@ -345,9 +354,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
     
+    // Botões de navegação
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            prevCard();
+            resetAutoScroll();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            nextCard();
+            resetAutoScroll();
+        });
+    }
+    
     // Inicialização final do carrossel
     setTimeout(() => {
-        carousel.scrollLeft = 0; // Garante mais uma vez que começa do início
+        // Centraliza o primeiro card
+        if (cards.length > 0) {
+            scrollToCard(0);
+        }
         startAutoScroll();
     }, 1000);
 });
