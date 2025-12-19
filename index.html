@@ -4,156 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Men - Moda Masculina</title>
+    <title>Palmeiras Style - Moda Masculina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+    <div class="ambient-glow ambient-glow--left"></div>
+
     <!-- Loader -->
-    <div class="loader-container" id="loader">
-        <div class="loader"></div>
+    <div class="loader" id="loader">
+        <div class="loader__spinner"></div>
     </div>
 
-    <!-- Banner Hero com Logo e Descrição -->
-    <section class="hero-banner">
-        <div class="hero-content">
-            <div class="logo-container">
-                <img src="https://cdn-img.zerozero.pt/img/logos/equipas/2248_imgbank_1683626314.png"
-                    alt="Palmeiras Logo">
+    <!-- Main Content -->
+    <main class="page">
+
+        <!-- Header / Topo -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="https://cdn-img.zerozero.pt/img/logos/equipas/2248_imgbank_1683626314.png" alt="Palmeiras Style">
             </div>
+            <h1 class="header__brand">PALMEIRAS STYLE</h1>
+            <p class="header__tagline">Moda Palmeirense de Qualidade</p>
+        </header>
 
-            <p>Moda Palmeirense de Qualidade</p>
-        </div>
-    </section>
-
-    <div class="contact-grid">
-        <!-- Redes Sociais (Instagram, Facebook e Mapa) -->
-        <div class="social-buttons-container fade-in-element">
-            <!-- Instagram -->
-            <a class="social-icon-button" href="https://instagram.com/stylemenoficial" target="_blank">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" />
-                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" />
+        <!-- Social Icons Section -->
+        <section class="social-icons">
+            <a href="https://instagram.com/stylemenoficial" target="_blank" class="social-icons__item"
+                aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" />
                 </svg>
             </a>
-
-            <!-- Facebook -->
-            <a class="social-icon-button" href="https://facebook.com/stylemenoficial" target="_blank">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
-                        stroke-width="2" />
+            <a href="https://facebook.com/stylemenoficial" target="_blank" class="social-icons__item"
+                aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
             </a>
-
-            <!-- Mapa -->
-            <a class="social-icon-button" href="https://www.google.com/maps?q=João+Pessoa,+PB" target="_blank">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" />
-                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
+            <a href="https://www.google.com/maps?q=João+Pessoa,+PB" target="_blank"
+                class="social-icons__item" aria-label="Abrir no Google Maps">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
                 </svg>
             </a>
-        </div>
+        </section>
 
-        <!-- Agenda -->
-        <div class="button-container fade-in-element">
-            <button class="main-button" onclick="openModal()">
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2" />
-                    <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2" />
-                    <circle cx="8" cy="15" r="1" fill="currentColor" />
-                    <circle cx="12" cy="15" r="1" fill="currentColor" />
-                    <circle cx="16" cy="15" r="1" fill="currentColor" />
-                    <circle cx="8" cy="19" r="1" fill="currentColor" />
-                    <circle cx="12" cy="19" r="1" fill="currentColor" />
+        <!-- CTA Button -->
+        <section class="cta-section">
+            <button class="cta-button" onclick="openWhatsApp()">
+                <svg class="cta-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                    <circle cx="8" cy="14" r="1" fill="currentColor" />
+                    <circle cx="12" cy="14" r="1" fill="currentColor" />
+                    <circle cx="16" cy="14" r="1" fill="currentColor" />
                 </svg>
                 <span>Encomende Conosco</span>
             </button>
-            <p class="text">Tire suas dúvidas sobre nossos produtos e peças</p>
-        </div>
-
-        <!-- Carrossel de Serviços -->
-        <section class="services-carousel-section">
-            <div class="services-carousel-container">
-                <button class="carousel-nav-btn carousel-nav-prev" id="carouselPrev" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
-                <div class="services-carousel" id="servicesCarousel">
-                    <div class="carousel-spacer"></div>
-
-                    <div class="service-card card-1" onclick="openModal()">
-                        <div class="service-card-image" style="background-image: url('neutro2.jpg');">
-                            <div class="service-card-overlay"></div>
-                            <div class="service-card-content">
-                                <h3 class="service-card-title">Camisas Sociais</h3>
-                                <p class="service-card-description">Elegância e sofisticação</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-card card-2" onclick="openModal()">
-                        <div class="service-card-image" style="background-image: url('neutro.jpg');">
-                            <div class="service-card-overlay"></div>
-                            <div class="service-card-content">
-                                <h3 class="service-card-title">Conjuntos Premium</h3>
-                                <p class="service-card-description">Estilo para o dia a dia</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-card card-3" onclick="openModal()">
-                        <div class="service-card-image" style="background-image: url('neutrocalca.jpg');">
-                            <div class="service-card-overlay"></div>
-                            <div class="service-card-content">
-                                <h3 class="service-card-title">Calças e Jeans</h3>
-                                <p class="service-card-description">Conforto e versatilidade</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-card card-4" onclick="openModal()">
-                        <div class="service-card-image" style="background-image: url('objeto.jpg');">
-                            <div class="service-card-overlay"></div>
-                            <div class="service-card-content">
-                                <h3 class="service-card-title">Acessórios & Outros</h3>
-                                <p class="service-card-description">Complete seu visual</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-spacer"></div>
-                </div>
-                <button class="carousel-nav-btn carousel-nav-next" id="carouselNext" aria-label="Próximo">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </button>
-            </div>
+            <p class="cta-section__hint">Tire suas dúvidas sobre nossos produtos e peças</p>
         </section>
 
-    </div>
+        <!-- Enhanced Products Carousel -->
+        <section class="products">
+            <div class="products__wrapper">
+                <div class="products__carousel" id="productsCarousel">
 
-    <!-- Footer minimalista -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Palmeiras Style - Moda Masculina. Todos os direitos reservados.
-                <p class="text-footer"> Crie seu serviço on-line com a <a href="https://Acessar.github.io/systech.com"
-                        target="_blank">Systech</a></p>
-                </p>
+                    <!-- Card 1 - Camisas Sociais -->
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <div class="product-card__bg"
+                                style="background-image: url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80');">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Camisas Sociais</h3>
+                                <p class="product-card__subtitle">Elegância e sofisticação para todas as ocasiões</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 - Conjuntos Premium -->
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <div class="product-card__bg"
+                                style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80');">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Conjuntos Premium</h3>
+                                <p class="product-card__subtitle">Estilo e conforto para o dia a dia</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 - Calças & Jeans -->
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <div class="product-card__bg"
+                                style="background-image: url('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80');">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Calças & Jeans</h3>
+                                <p class="product-card__subtitle">Conforto e versatilidade em cada peça</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 - Acessórios -->
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <div class="product-card__bg"
+                                style="background-image: url('https://blog.mensmarket.com.br/wp-content/uploads/2020/10/acessorios-estilosos.png');">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Acessórios & Outros</h3>
+                                <p class="product-card__subtitle">Complete seu visual com estilo</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-        </div>
+
+            <!-- Position Indicators (Dots) -->
+            <div class="products__indicators"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2025 Palmeiras Style - Moda Masculina</p>
+        <p class="footer__credit">Desenvolvido por <a href="https://Acessar.github.io/systech.com"
+                target="_blank">Systech</a></p>
     </footer>
 
     <script src="script.js"></script>
